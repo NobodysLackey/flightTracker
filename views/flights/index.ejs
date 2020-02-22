@@ -17,11 +17,11 @@
             </tr>
         </thead>
         <tbody>
-            <% movies.forEach( (movie) => { %>
+            <% flights.forEach((flight) => { %>
                 <tr>
-                    <td><%= movie.title %></td>
-                    <td><%= movie.releaseYear %></td>
-                    <td><%= movie.mpaaRating %></td>
+                    <td><%= flight.airline %></td>
+                    <td><%= flight.flightNo %></td>
+                    <td><%= flight.departs %></td>
                 </tr>
             <% }); %>
         </tbody>
