@@ -6,25 +6,32 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Flight Tracker</title>
 </head>
-<body>
-    <h1>Flight List</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Airline</th>
-                <th>Flight No.</th>
-                <th>Departure Date/Time</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% flights.forEach((flight) => { %>
+    <body>
+        <nav>
+            <a href="/" class="navlink">Home</a> | <a href="/flights" class="navlink">Flights</a> | <a href="/flights/new" class="navLink">New</a>
+        </nav>
+        <h1>Flight List</h1>
+        <table>
+            <thead>
                 <tr>
-                    <td><%= flight.airline %></td>
-                    <td><%= flight.flightNo %></td>
-                    <td><%= flight.departs %></td>
+                    <th>Airline</th>
+                    <th>Flight No.</th>
+                    <th>Departure Date/Time</th>
                 </tr>
-            <% }); %>
-        </tbody>
-    </table>
-  </body>
+            </thead>
+            <tbody>
+                <% flights.forEach((flight) => { %>
+                    <tr>
+                        <td><%= flight.airline %></td>
+                        <td><%= flight.flightNo %></td>
+                        <td><%= flight.departs %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <br>
+        <form action="/flights/new">
+            <button type="submit">New Flight</button>
+        </form>
+    </body>
 </html>

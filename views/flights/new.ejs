@@ -7,21 +7,24 @@
     <title>Flight Tracker - New</title>
 </head>
     <body>
+        <nav>
+            <a href="/" class="navlink">Home</a> | <a href="/flights" class="navlink">Flights</a> | <a href="/flights/new" class="navLink">New</a>
+        </nav>
         <h2>Enter a New Flight</h2>
         <form action="/flights" method="POST">
             <label>Airline:
-                <select name="Airline">
+                <select name="airline">
                     <option value="American">American</option>
                     <option value="Southwest">Southwest</option>
                     <option value="United">United</option>
                 </select>
-            </label><br>
+            </label><br><br>
             <label>Flight No.:
                 <input type="text" name="flightNo">
-            </label><br>
-            <label>Departure Date/Time
+            </label><br><br>
+            <label>Departure Date/Time:
                 <input type="datetime-local" name="departs">
-            </label><br>
+            </label><br><br>
             <input type="submit" value="Add Flight">
         </form>
     </body>

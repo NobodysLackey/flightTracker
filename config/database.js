@@ -6,9 +6,3 @@ mongoose.connect('mongodb://localhost/flights',
     useUnifiedTopology: true
     }
 );
-
-const db = mongoose.connection;
-
-db.on('connected', () => {
-    console.log(`Connected to flights at ${db.host}:${db.port}`);
-});
