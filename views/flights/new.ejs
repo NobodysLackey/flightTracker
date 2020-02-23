@@ -8,9 +8,11 @@
 </head>
     <body>
         <nav>
-            <a href="/" class="navlink">Home</a> | <a href="/flights" class="navlink">Flights</a> | <a href="/flights/new" class="navLink">New</a>
+            <a href="/" class="navlink">Home</a> | <a href="/flights" class="navlink">Flights</a> | <a href="/flights/new" class="navlink">New</a>
         </nav>
+        <br>
         <h2>Enter a New Flight</h2>
+        <br>
         <form action="/flights" method="POST">
             <label>Airline:
                 <select name="airline">
@@ -25,7 +27,7 @@
             <label>Departure Date/Time:
                 <input type="datetime-local" name="departs">
             </label><br><br>
-            <input type="submit" value="Add Flight">
+            <center><input type="submit" value="Add" class="btn"></center>
         </form>
     </body>
 </html>
