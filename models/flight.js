@@ -2,6 +2,16 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+const destinationSchema = new Schema ({
+    airport: {
+        type: String,
+        enum: ['AUS', 'DFW', 'LAX', 'SFO' & 'SEA']
+    },
+    arrival: {
+        type: Date
+    }
+});
+
 const flightSchema = new Schema ({
     airline: {
         type: String,
@@ -14,13 +24,14 @@ const flightSchema = new Schema ({
         required: true
     },
     departs: {
-        type: Date,
-        default: () => {
-          now = new Date();
-          oneYearFromNow = now.setFullYear(now.getFullYear() + 1);
-          return oneYearFromNow;
-        }
-    }
+        type: Date
+    },
+    airport: {
+        type: String,
+        enum: ['AUS', 'DFW', 'LAX', 'SFO' & 'SEA'],
+        default: "SFO"
+    },
+    destinations: [destinationSchema]
 });
 
 module.exports = mongoose.model('Flight', flightSchema);
