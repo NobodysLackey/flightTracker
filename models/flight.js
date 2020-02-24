@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const destinationSchema = new Schema ({
     airport: {
         type: String,
-        enum: ['AUS', 'DFW', 'LAX', 'SFO' & 'SEA']
+        enum: ['AUS', 'DFW', 'LAX', 'SFO', 'SEA']
     },
     arrival: {
         type: Date
@@ -28,7 +28,7 @@ const flightSchema = new Schema ({
     },
     airport: {
         type: String,
-        enum: ['AUS', 'DFW', 'LAX', 'SFO' & 'SEA'],
+        enum: ['AUS', 'DFW', 'LAX', 'SFO', 'SEA'],
         default: "SFO"
     },
     destinations: [destinationSchema]
