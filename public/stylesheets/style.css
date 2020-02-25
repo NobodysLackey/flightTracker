@@ -73,3 +73,7 @@ a {
 a:hover {
   color: rgb(148, 14, 41);
 }
+
+th {
+  font-weight: bold;
+}

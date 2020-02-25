@@ -8,7 +8,6 @@ function create(req, res) {
     Flight.findById(req.params.id, (err, flight) => {
         flight.destinations.push(req.body);
         flight.save( (err) => {
-            console.log(err);
             res.redirect(`/flights/${flight._id}`);
         });
     });
