@@ -3,14 +3,13 @@
         <h2>Flight Details</h2>
         <br>
         <section>
-            <div>Airline: </div>
-            <div><%= flight.airline %></div>
-            <div>Origin: </div>
-            <div><%= flight.airport %></div>
-            <div>Flight Number: </div>
-            <div><%= flight.flightNo %></div>
-            <div>Departure Date/Time: </div>
-            <div><%= flight.departs %></div>
+          <table>
+                    <tr>Airline: <%= flight.airline %></tr><br>
+                    <tr>Origin: <%= flight.airport %></tr><br>
+                    <tr>Flight Number: <%= flight.flightNo %></tr><br>
+                    <tr>Depart Date/Time:<br>
+                      <%= flight.departs %></tr><br>
+          </table>
             <br><br>
             <form action="/flights/<%= flight._id %>" method="POST">
                 <label>Destination Airport:
@@ -25,7 +24,7 @@
                 <label>Arrival Date/Time:
                     <input type="datetime-local" name="arrival">
                 </label><br><br>
-                <input type="submit" value="Update" class="btn">
+                <center><input type="submit" value="Update" class="btn"></center>
                 <br><br>
             </form>
 
