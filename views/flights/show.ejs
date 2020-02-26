@@ -3,13 +3,14 @@
         <h2>Flight Details</h2>
         <br>
         <section>
-          <table>
-                    <tr>Airline: <%= flight.airline %></tr><br>
-                    <tr>Origin: <%= flight.airport %></tr><br>
-                    <tr>Flight Number: <%= flight.flightNo %></tr><br>
-                    <tr>Depart Date/Time:<br>
-                      <%= flight.departs %></tr><br>
-          </table>
+            <div>Airline: </div>
+            <div><%= flight.airline %></div>
+            <div>Origin: </div>
+            <div><%= flight.airport %></div>
+            <div>Flight Number: </div>
+            <div><%= flight.flightNo %></div>
+            <div>Departure Date/Time: </div>
+            <div><%= flight.departs %></div>
             <br><br>
             <form action="/flights/<%= flight._id %>" method="POST">
                 <label>Destination Airport:
@@ -27,27 +28,6 @@
                 <center><input type="submit" value="Update" class="btn"></center>
                 <br><br>
             </form>
-
-            <% if (tickets.flight.length) { %>
-              <table>
-                <thead>
-                  <th>Tickets Purchased</th>
-                </thead>
-                <tbody>
-                    <tr>
-                      <td>Seat: <%= ticket.seat %></td>
-                    </tr>
-                </tbody>
-              </table>
-            <% } else { %>
-              <h5>No Tickets Purchased!</h5>
-            <% } %>
-
-            <br><br>
-            <form action="/flights/<%= flight._id%>/tickets/new" method="POST">
-              <button type="submit">New Ticket</button>
-            </form>
-            <br><br>
 
             <% if (flight.destinations.length) { %>
                 <table>
@@ -67,9 +47,9 @@
                   </tbody>
                 </table>
               <% } else { %>
-                <h5>No Destinations Yet!</h5>
+                <h5>No Destinations Yet</h5>
               <% } %>
               
         </section>
-
-<%- include('../partials/footer') %>
+    </body>
+</html>
