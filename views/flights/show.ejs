@@ -28,6 +28,27 @@
                 <br><br>
             </form>
 
+            <% if (tickets.flight.length) { %>
+              <table>
+                <thead>
+                  <th>Tickets Purchased</th>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>Seat: <%= ticket.seat %></td>
+                    </tr>
+                </tbody>
+              </table>
+            <% } else { %>
+              <h5>No Tickets Purchased!</h5>
+            <% } %>
+
+            <br><br>
+            <form action="/flights/<%= flight._id%>/tickets/new" method="POST">
+              <button type="submit">New Ticket</button>
+            </form>
+            <br><br>
+
             <% if (flight.destinations.length) { %>
                 <table>
                   <thead>
@@ -46,9 +67,9 @@
                   </tbody>
                 </table>
               <% } else { %>
-                <h5>No Destinations Yet</h5>
+                <h5>No Destinations Yet!</h5>
               <% } %>
               
         </section>
-    </body>
-</html>
+
+<%- include('../partials/footer') %>

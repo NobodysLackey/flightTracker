@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<h2>Choose A Seat</h2>
+    <br>
+    <form action="/tickets" method="POST">
+        <label>Seat #:
+            <input name="seat" required pattern="[A-F][1-9]\d?"><br>
+            between A1 and F9
+        </label><br><br>
+    </form>
+
+<%- include('../partials/footer') %>
