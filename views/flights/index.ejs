@@ -19,7 +19,11 @@
                         <td><%= flight.airport %></td>
                         <td><%= flight.flightNo %></td>
                         <td><%= flight.departs %></td>
-                        <td><a href="/flights/<%= flight._id %>">Details</a></td>
+                        <td>
+                            <form action="/flights/<%= flight._id %>">
+                                <button>See</button>
+                            </form>
+                        </td>
                     </tr>
                 <% }); %>
             </tbody>
