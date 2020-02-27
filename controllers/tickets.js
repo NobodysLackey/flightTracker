@@ -1,19 +1,22 @@
 const Ticket = require('../models/ticket');
+const Flight = require('../models/flight');
 
 module.exports = {
     create,
     new: newTicket
 };
 
-function create(req, res) {
-    Ticket.find({}, (err, tickets) => {
-        tickets.push(req.body);
-        tickets.save( (err) => {
-            res.redirect(`/flights/${flight._id}`);
-        })
+function newTicket (req, res) {
+    Flight.findById(req.params.id, (err, flight) => {
+        res.render('tickets/new', {title: 'Add Ticket', flight});
     })
 };
 
-function newTicket (req, res) {
-    res.render('tickets/new', {id: req.params.id});
+function create (req, res) {
+    console.log(req.body);
+    console.log(req.params);
+    req.body.flight = req.params.id;
+    Ticket.create(req.body, (err) => {
+        res.redirect(`/flights/${req.params.id}`);
+    })
 };

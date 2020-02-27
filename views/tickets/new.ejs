@@ -1,5 +1,18 @@
 <%- include('../partials/header') %>
 
-<h2>The Tickets New Page!</h2>
+<h2>Book a Seat!</h2><br>
+
+<center>
+<form action="/flights/<%= flight._id %>/tickets" method="POST">
+    <label>Choose A Seat:<br>
+        <input name="seat" required pattern="[A-F][1-9]\d?" autocomplete="off">
+    </label><br><br>
+    <label>Enter Price:<br>
+        <input name="price" required type="text" autocomplete="off">
+    </label>
+    <br><br>
+    <input type="submit" value="Book" class="btn">
+</form>
+</center>
 
 <%- include('../partials/footer') %>

@@ -53,31 +53,30 @@
             <% } %>
 
             <center>
-              <br><br>
+              <br>
               <form action="/flights/<%= flight._id %>/tickets/new" method="GET">
-                <label>Choose A Seat:<br>
-                <input name="seat" required pattern="[A-F][1-9]\d?" autocomplete="off">
-                <br><br>
                 <input type="submit" value="Book" class="btn">
-                </label><br><br>
+                <br><br>
               </form>
             </center>
 
             <% if (tickets.length) { %>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Unavailable Seats</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <% tickets.forEach((t) => { %>
+              <center>
+                <table>
+                  <thead>
                     <tr>
-                      <td><%= t.seat %></td>
+                      <th>Unavailable Seats</th>
                     </tr>
-                  <% }); %>
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    <% tickets.forEach((t) => { %>
+                      <tr>
+                        <td><%= t.seat %></td>
+                      </tr>
+                    <% }); %>
+                  </tbody>
+                </table>
+              </center>
             <% } else { %>
               <center><h5>No Tickets Purchased!</h5></center>
             <% } %>
