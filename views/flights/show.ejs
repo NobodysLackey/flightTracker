@@ -12,7 +12,8 @@
             <div>Departure Date/Time: </div>
             <div><%= flight.departs %></div>
             <br><br>
-            <form action="/flights/<%= flight._id %>" method="POST">
+            <center>
+              <form action="/flights/<%= flight._id %>" method="POST">
                 <label>Destination Airport:
                     <select name="airport">
                         <option value="AUS">AUS</option>
@@ -21,14 +22,15 @@
                         <option value="SFO">SFO</option>
                         <option value="SEA">SEA</option>
                     </select>
-                </label><br><br>
-                <label>Arrival Date/Time:
+                </label><br>
+                <label>Arrival Date/Time:<br>
                     <input type="datetime-local" name="arrival">
                 </label><br><br>
-                <center><input type="submit" value="Update" class="btn"></center>
+                <input type="submit" value="Add" class="btn">
                 <br><br>
-            </form>
-
+              </form>
+            </center>
+              
             <% if (flight.destinations.length) { %>
               <table>
                 <thead>
@@ -47,9 +49,39 @@
                 </tbody>
               </table>
             <% } else { %>
-              <h5>No Destinations Yet</h5>
+              <center><h5>No Destinations Yet</h5></center>
+            <% } %>
+
+            <center>
+              <br><br>
+              <form action="/flights/<%= flight._id %>/tickets/new" method="GET">
+                <label>Choose A Seat:<br>
+                <input name="seat" required pattern="[A-F][1-9]\d?" autocomplete="off">
+                <br><br>
+                <input type="submit" value="Book" class="btn">
+                </label><br><br>
+              </form>
+            </center>
+
+            <% if (tickets.length) { %>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Unavailable Seats</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% tickets.forEach((t) => { %>
+                    <tr>
+                      <td><%= t.seat %></td>
+                    </tr>
+                  <% }); %>
+                </tbody>
+              </table>
+            <% } else { %>
+              <center><h5>No Tickets Purchased!</h5></center>
             <% } %>
               
         </section>
-    </body>
-</html>
+
+<%- include('../partials/footer') %>

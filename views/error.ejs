@@ -1,5 +1,14 @@
 <%- include('../views/partials/header') %>
 
-<h1><%= message %></h1>
+
+<div class="error">
+<center>
 <h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<h2><%= message %></h2>
+<br><br>
+</center>
+<h6><%= error.stack %></h6>
+</div>
+
+
+<%- include('../views/partials/footer') %>

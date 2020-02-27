@@ -21,7 +21,7 @@
                         <td><%= flight.departs %></td>
                         <td>
                             <form action="/flights/<%= flight._id %>">
-                                <button>See</button>
+                                <button>View</button>
                             </form>
                         </td>
                     </tr>
@@ -29,5 +29,5 @@
             </tbody>
         </table>
         <br>
-    </body>
-</html>
+        
+<%- include('../partials/footer') %>
