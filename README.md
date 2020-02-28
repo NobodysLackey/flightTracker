@@ -31,8 +31,12 @@
 ![Main Page](public/images/screenshots/index.png)
 ###### List of Flights
 ![List of Flights](public/images/screenshots/flights.png)
+###### Flight Details
+![Flight Details](public/images/screenshots/details.png)
 ###### Add a Flight
 ![Add a Flight](public/images/screenshots/new.png)
+###### Book a Seat
+![Book a Seat](public/images/screenshots/book.png)
 ***
 
 ### ***User Experience***
@@ -50,9 +54,11 @@
 
 ### ***Future Updates***
 
+- [x] ~~Style the app~~
 - [ ] Add the ability to edit existing flight details
 - [ ] Create a better layout for flight information
 - [ ] Add JavaScript animations for the flight items
+  
 ***
 
 ### ***Credits***

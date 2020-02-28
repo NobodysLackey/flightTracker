@@ -85,6 +85,7 @@ input {
   border-width: 1px;
   border-radius: 5px;
   vertical-align: middle;
+  text-align: center;
 }
 
 input:hover {
