@@ -1,6 +1,6 @@
 # **Mongoose "Flights" Lab**
 
-### Date: 2/20/2020
+### Date: 3/2/2020
 
 #### By: Michael Lackey
 ***
@@ -55,10 +55,16 @@
 ### ***Future Updates***
 
 - [x] ~~Style the app~~
+- [x] ~~Add a navigation bar to easily navigate the views~~
+- [ ] Display the default departure date when displaying the new flight form
+- [ ] List the flights by departure date in ascending order
+- [ ] Flights displayed using red text if the flight's departure date has passed
+- [ ] List destinations for a flight by the arrival date/time in ascending order
+- [ ] Exclude airports listed that have already been used by other destinations and/or the flight's airport
 - [ ] Add the ability to edit existing flight details
-- [ ] Create a better layout for flight information
-- [ ] Add JavaScript animations for the flight items
-  
+- [ ] Add a feature to delete a flight
+- [ ] Add a feature to delete a flight's ticket
+- [ ] Create a better layout for flight information  
 ***
 
 ### ***Credits***
