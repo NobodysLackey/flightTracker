@@ -1,6 +1,31 @@
 <%- include('../partials/header') %>
 
-    <h2>Edit a Flight</h2>
+    <h2>Update Flight Details</h2>
     <br>
+    <form action="/flights" method="POST">
+        <label>Airline:
+            <select name="airline" current="<%= flight.airline %>">
+                <option value="American">American</option>
+                <option value="Southwest">Southwest</option>
+                <option value="United">United</option>
+            </select>
+        </label><br><br>
+        <label>Origin Airport:
+            <select name="airport" selected="<%= flight.airport %>">
+                <option value="AUS">AUS</option>
+                <option value="DFW">DFW</option>
+                <option value="LAX">LAX</option>
+                <option value="SEA">SEA</option>
+                <option value="SFO">SFO</option>
+            </select>
+        </label><br><br>
+        <label>Flight No.:
+            <input type="text" name="flightNo" autocomplete="off" value="<%= flight.flightNo %>">
+        </label><br><br>
+        <label>Departure Date/Time:
+            <input type="datetime-local" name="departs">
+        </label><br><br>
+        <center><input type="submit" value="Update" class="btn"></center>
+    </form>
 
 <%- include('../partials/footer') %>

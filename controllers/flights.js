@@ -5,7 +5,10 @@ module.exports = {
     index,
     show,
     new: newFlight,
-    create
+    create,
+    delete: deleteOne,
+    showUpdate,
+    update
 };
 
 function index (req, res) {
@@ -18,7 +21,6 @@ function index (req, res) {
 function show(req, res) {
     Flight.findById(req.params.id, (err, flight) => {
         Ticket.find({flight: flight._id}, (err, tickets) => {
-            console.log(tickets);
             res.render('flights/show', { title: 'Flight Details', flight, tickets });
         })
     })
@@ -39,4 +41,20 @@ function create (req, res) {
         if (err) return res.render('flights/new');
         res.redirect('/flights');
     });
+};
+
+function deleteOne (req, res) {
+    Flight.findByIdAndDelete(req.params.id, (err, flight) => {
+        res.redirect('/flights');
+    })
+};
+
+function showUpdate (req, res) {
+    Flight.findById(req.params.id, (err, flight) => {
+        res.render('flights/edit', {flight});
+    })
+};
+
+function update (req, res) {
+    
 };

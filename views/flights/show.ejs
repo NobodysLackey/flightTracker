@@ -11,7 +11,12 @@
             <div><%= flight.flightNo %></div>
             <div>Departure Date/Time: </div>
             <div><%= flight.departs %></div>
-            <br><br>
+            <br>
+            <center>
+              <form action="/flights/<%= flight._id %>/edit" method="GET">
+                <button type="submit" class="btn">Update</button>
+              </form><br><br>
+            </center>
             <center>
               <form action="/flights/<%= flight._id %>" method="POST">
                 <label>Destination Airport:
@@ -72,6 +77,11 @@
                     <% tickets.forEach((t) => { %>
                       <tr>
                         <td><%= t.seat %> | $<%= t.price %></td>
+                        <td>
+                          <form action="/flights/<%= flight._id %>/tickets/<%= t._id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="delete-btn">X</button>
+                          </form>
+                        </td>
                       </tr>
                     <% }); %>
                   </tbody>
