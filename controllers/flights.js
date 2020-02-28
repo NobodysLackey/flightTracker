@@ -34,7 +34,7 @@ function create (req, res) {
     if (!req.body.departs) {
         let redate = new Date();
         redate.setFullYear(redate.getFullYear()+1);
-        req.body.departs
+        req.body.departs = redate;
     }
     let flight = new Flight(req.body);
     flight.save((err) => {
@@ -56,5 +56,13 @@ function showUpdate (req, res) {
 };
 
 function update (req, res) {
-    
+    console.log('TACO')
+    if (!req.body.departs) {
+        let redate = new Date();
+        redate.setFullYear(redate.getFullYear()+1);
+        req.body.departs = redate;
+    }
+    Flight.findByIdAndUpdate(req.params.id, req.body, (err, flight) => {
+        res.redirect("/flights/");
+    })
 };

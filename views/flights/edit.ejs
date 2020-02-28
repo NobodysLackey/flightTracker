@@ -2,16 +2,18 @@
 
     <h2>Update Flight Details</h2>
     <br>
-    <form action="/flights" method="POST">
+    <form action="/flights/<%= flight._id %>?_method=PUT" method="POST">
         <label>Airline:
-            <select name="airline" current="<%= flight.airline %>">
+            <select name="airline">
+                <option value="<%= flight.airline %>"><%= flight.airline %></option>
                 <option value="American">American</option>
                 <option value="Southwest">Southwest</option>
                 <option value="United">United</option>
             </select>
         </label><br><br>
         <label>Origin Airport:
-            <select name="airport" selected="<%= flight.airport %>">
+            <select name="airport">
+                <option value="<%= flight.airport %>"><%= flight.airport %></option>
                 <option value="AUS">AUS</option>
                 <option value="DFW">DFW</option>
                 <option value="LAX">LAX</option>
