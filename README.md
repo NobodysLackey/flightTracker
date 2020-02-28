@@ -27,11 +27,11 @@
 
 ### ***Screenshots***
 
-###### Skills List
+###### Main Page
 ![Main Page](public/images/screenshots/index.png)
-###### View a Skill
+###### List of Flights
 ![List of Flights](public/images/screenshots/flights.png)
-###### Edit a Skill
+###### Add a Flight
 ![Add a Flight](public/images/screenshots/new.png)
 ***
 
@@ -43,7 +43,7 @@
 ##### Claire is heading home for Christmas and has a connecting flight with a different seat number.  She needs to be able to keep track of which flights she's taking and what seat she has booked for each.
 #### Minimum Viable Product
 * ##### As a user, I should be able to easily see a list of the flights I've added.
-* ##### As a user, I should be able to add/remove flights from the list.
+* ##### As a user, I should be able to add flights to the list.
 * ##### As a user, I should be able to view the details of each flight.
 * ##### As a user, I should be able to book my seat for each flight.
 ***
@@ -51,7 +51,6 @@
 ### ***Future Updates***
 
 - [ ] Add the ability to edit existing flight details
-- [ ] Add the ability to toggle/untoggle items as mastered
 - [ ] Create a better layout for flight information
 - [ ] Add JavaScript animations for the flight items
 ***
