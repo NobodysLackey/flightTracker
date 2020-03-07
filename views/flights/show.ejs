@@ -1,96 +1,97 @@
 <%- include('../partials/header') %>
 
-        <h2>Flight Details</h2>
-        <br>
-        <section>
-            <div>Airline: </div>
-            <div><%= flight.airline %></div>
-            <div>Origin: </div>
-            <div><%= flight.airport %></div>
-            <div>Flight Number: </div>
-            <div><%= flight.flightNo %></div>
-            <div>Departure Date/Time: </div>
-            <div><%= flight.departs %></div>
-            <br>
-            <center>
-              <form action="/flights/<%= flight._id %>/edit" method="GET">
-                <button type="submit" class="btn">Update</button>
-              </form><br><br>
-            </center>
-            <center>
-              <form action="/flights/<%= flight._id %>" method="POST">
-                <label>Destination Airport:
-                    <select name="airport">
-                        <option value="AUS">AUS</option>
-                        <option value="DFW">DFW</option>
-                        <option value="LAX">LAX</option>
-                        <option value="SFO">SFO</option>
-                        <option value="SEA">SEA</option>
-                    </select>
-                </label><br>
-                <label>Arrival Date/Time:<br>
-                    <input type="datetime-local" name="arrival">
-                </label><br><br>
-                <input type="submit" value="Add" class="btn">
-                <br><br>
-              </form>
-            </center>
-              
-            <% if (flight.destinations.length) { %>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Dest.</th>
-                    <th>Arrival Date/Time</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <% flight.destinations.forEach((d) => { %>
-                    <tr>
-                      <td><%= d.airport %></td>
-                      <td><%= d.arrival %></td>
-                    </tr>
-                  <% }); %>
-                </tbody>
-              </table>
-            <% } else { %>
-              <center><h5>No Destinations Yet</h5></center>
-            <% } %>
+<h2>Flight Details</h2>
+<br>
+<section>
+    <div>Airline: </div>
+    <div><%= flight.airline %></div>
+    <div>Origin: </div>
+    <div><%= flight.airport %></div>
+    <div>Flight Number: </div>
+    <div><%= flight.flightNo %></div>
+    <div>Departure Date/Time: </div>
+    <div><%= flight.departs %></div>
+    <br>
+    <center>
+      <form action="/flights/<%= flight._id %>/edit" method="GET">
+        <button type="submit" class="btn">Update</button>
+      </form>
+      </center>
+      <br><br>
+      <center>
+      <form action="/flights/<%= flight._id %>" method="POST">
+        <label>Destination Airport:
+            <select name="airport">
+                <option value="AUS">AUS</option>
+                <option value="DFW">DFW</option>
+                <option value="LAX">LAX</option>
+                <option value="SFO">SFO</option>
+                <option value="SEA">SEA</option>
+            </select>
+        </label><br>
+        <label>Arrival Date/Time:<br>
+            <input type="datetime-local" name="arrival">
+        </label><br><br>
+        <input type="submit" value="Add" class="btn">
+        <br><br>
+      </form>
+    </center>
+      
+    <% if (flight.destinations.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Dest.</th>
+            <th>Arrival Date/Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% flight.destinations.forEach((d) => { %>
+            <tr>
+              <td><%= d.airport %></td>
+              <td><%= d.arrival %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <center><h5>No Destinations Yet</h5></center>
+    <% } %>
 
-            <center>
-              <br>
-              <form action="/flights/<%= flight._id %>/tickets/new" method="GET">
-                <input type="submit" value="Book" class="btn">
-                <br><br>
-              </form>
-            </center>
+    <center>
+      <br>
+      <form action="/flights/<%= flight._id %>/tickets/new" method="GET">
+        <input type="submit" value="Book" class="btn">
+        <br><br>
+      </form>
+    </center>
 
-            <% if (tickets.length) { %>
-              <center>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Purchased Seats</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <% tickets.forEach((t) => { %>
-                      <tr>
-                        <td><%= t.seat %> | $<%= t.price %></td>
-                        <td>
-                          <form action="/flights/<%= flight._id %>/tickets/<%= t._id %>?_method=DELETE" method="POST">
-                            <button type="submit" class="delete-btn">X</button>
-                          </form>
-                        </td>
-                      </tr>
-                    <% }); %>
-                  </tbody>
-                </table>
-              </center>
-            <% } else { %>
-              <center><h5>No Tickets Purchased!</h5></center>
-            <% } %>
-              
-        </section>
+    <% if (tickets.length) { %>
+      <center>
+        <table>
+          <thead>
+            <tr>
+              <th>Purchased Seats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% tickets.forEach((t) => { %>
+              <tr>
+                <td><%= t.seat %> | $<%= t.price %></td>
+                <td>
+                  <form action="/flights/<%= flight._id %>/tickets/<%= t._id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="delete-btn">X</button>
+                  </form>
+                </td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </center>
+    <% } else { %>
+      <center><h5>No Tickets Purchased!</h5></center>
+    <% } %>
+      
+</section>
 
 <%- include('../partials/footer') %>
