@@ -23,7 +23,7 @@
 ### ***Getting Started***
 
 ##### Use this website to keep track of flights. New flights can be added to the list, destinations can be added to each flight, and seats can be booked for each flight. Use the nav bar on top to move easily throughout the views.
-##### The project has been deployed to Heroku and can be viewed [here](https://mlackey9601.github.io/mongoose-flights/).
+##### The project has been deployed to Heroku and can be viewed [here](https://mongoose-flights-lab.herokuapp.com/).
 ***
 
 ### ***Screenshots***
