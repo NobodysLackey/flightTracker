@@ -3,21 +3,23 @@
 ### Date: 3/2/2020
 
 #### By: Michael Lackey
-#### [GitHub](https://github.com/mlackey9601) | [LinkedIn](https://www.linkedin.com/in/michaelglackey/)
+#### [Website](https://michaellackey.com/) | [GitHub](https://github.com/mlackey9601) | [LinkedIn](https://www.linkedin.com/in/michaelglackey/) | [GA Profile](https://profiles.generalassemb.ly/michaellackey)
 ***
 
 ### ***Description***
 
-##### The goal of the lab is to put in repitition doing everything that we did during the *Express - Routers & Controllers*, *Express - Middleware*, and *Mongoose - Referencing Related Data* lessons.
+##### A NodeJS/ExpressJS app for logging and tracking flights.
 ***
 
 ### ***Technologies Used***
 
-* ##### JavaScript
+* ##### Chajr 1.0.0
 * ##### HTML
 * ##### CSS
-* ##### Node.js/Express
+* ##### JavaScript
+* ##### NodeJS/ExpressJS
 * ##### MongoDB/Mongoose
+* ##### Heroku
 ***
 
 ### ***Getting Started***
@@ -40,19 +42,6 @@
 ![Book a Seat](public/images/screenshots/book.png)
 ***
 
-### ***User Experience***
-
-#### User Story #1
-##### George has 3 kids and needs to keep track of all of their flights as they head home for Christmas. He needs somewhere he can enter the information for each of them in one place.
-#### User Story #2
-##### Claire is heading home for Christmas and has a connecting flight with a different seat number.  She needs to be able to keep track of which flights she's taking and what seat she has booked for each.
-#### As a user...
-* ##### I should be able to easily see a list of the flights I've added.
-* ##### I should be able to add flights to the list.
-* ##### I should be able to view the details of each flight.
-* ##### I should be able to book my seat for each flight.
-***
-
 ### ***Future Updates***
 
 - [x] ~~Style the app~~
@@ -70,5 +59,5 @@
 
 ### ***Credits***
   
-##### None
+##### App Scaffolding: [Chajr](https://github.com/davidstinson/chajr)
 ***
