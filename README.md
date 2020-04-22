@@ -1,4 +1,4 @@
-# **Flight Tracker**
+![Flight Tracker](public/images/banner.png)
 
 ### Date: 3/2/2020
 
