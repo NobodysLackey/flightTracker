@@ -42,10 +42,4 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-const port = process.env.PORT || 3001;
-
-app.listen(port, () => {
-  console.log(` . . . Express backend services running on port ${port} . . . `)
-});
-
 module.exports = app;
