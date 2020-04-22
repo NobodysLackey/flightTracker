@@ -32,12 +32,16 @@
 
 ###### Main Page
 ![Main Page](public/images/screenshots/index.png)
+
 ###### List of Flights
 ![List of Flights](public/images/screenshots/flights.png)
+
 ###### Flight Details
 ![Flight Details](public/images/screenshots/details.png)
+
 ###### Add a Flight
 ![Add a Flight](public/images/screenshots/new.png)
+
 ###### Book a Seat
 ![Book a Seat](public/images/screenshots/book.png)
 ***
