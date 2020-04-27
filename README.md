@@ -12,14 +12,10 @@
 ***
 
 ### ***Technologies Used***
+![Technologies Used](public/images/tech-banner.png)
 
-* ##### Chajr 1.0.0
-* ##### HTML
-* ##### CSS
-* ##### JavaScript
-* ##### NodeJS/ExpressJS
-* ##### MongoDB/Mongoose
-* ##### Heroku
+##### ***Additional Technologies***
+* ###### Chajr 1.1.4
 ***
 
 ### ***Getting Started***
@@ -63,5 +59,5 @@
 
 ### ***Credits***
   
-##### App Scaffolding: [Chajr](https://github.com/davidstinson/chajr)
+##### App Scaffolding: [Chajr 1.1.4](https://github.com/davidstinson/chajr)
 ***
