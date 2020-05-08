@@ -8,7 +8,7 @@
 
 ### ***Description***
 
-##### A NodeJS/ExpressJS app for logging and tracking flights.
+##### A Node.js/Express app for logging and tracking flights.
 ***
 
 ### ***Technologies Used***
