@@ -26,8 +26,8 @@
 
 ### ***Screenshots***
 
-<div align="center">
-  <pre vertical-align="middle">
+<div align="center" vertical-align="30%">
+  <pre>
     <img src="public/images/screenshots/index.png" height="250" />&nbsp;&nbsp;&nbsp;<img src="public/images/screenshots/flights.png" height="250" />&nbsp;&nbsp;&nbsp;<img src="public/images/screenshots/details.png" height="500" />&nbsp;&nbsp;&nbsp;<img src="public/images/screenshots/new.png" height="250" />&nbsp;&nbsp;&nbsp;<img src="public/images/screenshots/book.png" height="250" />
   </pre>
 </div>
