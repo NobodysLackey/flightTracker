@@ -26,20 +26,12 @@
 
 ### ***Screenshots***
 
-###### Main Page
-![Main Page](public/images/screenshots/index.png)
+<div align="center">
+  <pre>
+    <img src="public/images/screenshots/index.png" height="500" />&nbsp;&nbsp;&nbsp;<img src="public/images/screenshots/flights.png" height="500" />&nbsp;&nbsp;&nbsp;<img src="public/images/screenshots/details.png" height="500" />&nbsp;&nbsp;&nbsp;<img src="public/images/screenshots/new.png" height="500" />&nbsp;&nbsp;&nbsp;<img src="public/images/screenshots/book.png" height="500" />
+  </pre>
+</div>
 
-###### List of Flights
-![List of Flights](public/images/screenshots/flights.png)
-
-###### Flight Details
-![Flight Details](public/images/screenshots/details.png)
-
-###### Add a Flight
-![Add a Flight](public/images/screenshots/new.png)
-
-###### Book a Seat
-![Book a Seat](public/images/screenshots/book.png)
 ***
 
 ### ***Future Updates***
